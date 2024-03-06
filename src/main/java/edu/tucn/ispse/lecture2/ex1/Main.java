@@ -11,8 +11,9 @@ public class Main {
         System.out.println(String.format("The tree is %d high and %d wide", tree1.getHeight(), tree1.getWidth()));
 
         Tree tree2 = new Tree(1, 1, 5, "Ionuț", "blue");
-        Tree tree3 = new Tree(2, 1, 6, "Mariuța", "blue");
-        Tree tree4 = tree2;
+        Tree tree3 = new Tree(2, 1, 6, "Mariuța", "green");
+
+        Tree tree4 = tree2; // assignment by reference
         tree2.grow(2, 2);
         System.out.println(tree4.getHeight());
 

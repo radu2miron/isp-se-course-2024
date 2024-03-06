@@ -7,7 +7,7 @@ package edu.tucn.ispse.lecture2.ex2;
 public class Main {
     public static void main(String[] args) {
         int a = 5;
-        int b = a;
+        int b = a; // assignment by value
 
         a++;++a;
 
