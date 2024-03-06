@@ -1,4 +1,4 @@
-package edu.tucn.ispse.lecture2;
+package edu.tucn.ispse.lecture1;
 
 import java.util.Scanner;
 
@@ -8,7 +8,7 @@ import java.util.Scanner;
  * <p>
  * Simple(st) example.
  */
-public class Main {
+public class Main { // All Java code has to be written inside a class
     public static void main(String[] args) { // the main method is the place where the execution of the application starts
         Scanner scanner = new Scanner(System.in); // create a scanner used from reading from the console
 
