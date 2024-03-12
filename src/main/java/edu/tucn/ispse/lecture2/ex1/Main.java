@@ -14,8 +14,9 @@ public class Main {
         Tree tree3 = new Tree(2, 1, 6, "Mariuța", "green");
 
         Tree tree4 = tree2; // assignment by reference
-        tree2.grow(2, 2);
-        System.out.println(tree4.getHeight());
+        tree2.grow(2, 2); // modify tree2 size
+        System.out.println(tree4.getHeight()); // the height and width of tree4 is modified
+        // tree2 and tree4 refer the same object
 
         tree2.communicate(tree3);
         tree3.communicate(tree1);

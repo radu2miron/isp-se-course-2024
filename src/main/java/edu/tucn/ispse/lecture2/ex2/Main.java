@@ -8,9 +8,7 @@ public class Main {
     public static void main(String[] args) {
         int a = 5;
         int b = a; // assignment by value
-
-        a++;++a;
-
-        System.out.println(b);
+        a++; // increment a
+        System.out.println(b); // b is not incremented
     }
 }

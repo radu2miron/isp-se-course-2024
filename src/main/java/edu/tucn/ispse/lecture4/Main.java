@@ -1,0 +1,30 @@
+package edu.tucn.ispse.lecture4;
+
+/**
+ * @author Radu Miron
+ * @version 1
+ */
+public class Main {
+    public static void main(String[] args) {
+        initializeSystem();
+    }
+
+    private static void initializeSystem() {
+        // initialize components and ticket system
+        User[] users = createUsers();
+        AuthenticationModule authenticationModule = new AuthenticationModule(users);
+        TicketSystem ticketSystem = new TicketSystem(authenticationModule);
+
+        //initialize and load UI
+        UserInterface userInterface = new UserInterface(ticketSystem);
+        userInterface.loadGeneralUserInterface();
+    }
+
+    static User[] createUsers() {
+        User[] users = new User[3];
+        users[0] = new Admin("admin", "pwd1");
+        users[1] = new Client("client1", "pwd2", "id123");
+        users[2] = new Client("client2", "pwd3", "id456");
+        return users;
+    }
+}
