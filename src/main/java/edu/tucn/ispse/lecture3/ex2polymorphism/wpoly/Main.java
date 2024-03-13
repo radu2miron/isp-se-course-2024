@@ -11,13 +11,12 @@ public class Main {
         System.out.println("Input: 1. Dacia, 2. BMW, 3. Exit");
         Scanner scanner = new Scanner(System.in);
         String choice = scanner.nextLine();
-        Car car = null;
 
-        switch (choice) {
-            case "1" -> car = new Dacia("Dacia");
-            case "2" -> car = new BMW("BMW");
-            default -> System.exit(0);
-        }
+        Car car = switch (choice) {
+            case "1" -> new Dacia();
+            case "2" -> new BMW();
+            default -> throw new IllegalStateException("Unexpected value: " + choice);
+        };
 
         car.start();
         car.go();

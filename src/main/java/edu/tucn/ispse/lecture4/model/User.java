@@ -1,4 +1,4 @@
-package edu.tucn.ispse.lecture4;
+package edu.tucn.ispse.lecture4.model;
 
 /**
  * @author Radu Miron

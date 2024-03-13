@@ -1,5 +1,12 @@
 package edu.tucn.ispse.lecture4;
 
+import edu.tucn.ispse.lecture4.systemcomponents.AuthenticationModule;
+import edu.tucn.ispse.lecture4.systemcomponents.TicketSystem;
+import edu.tucn.ispse.lecture4.systemcomponents.UserInterface;
+import edu.tucn.ispse.lecture4.model.Admin;
+import edu.tucn.ispse.lecture4.model.Client;
+import edu.tucn.ispse.lecture4.model.User;
+
 /**
  * @author Radu Miron
  * @version 1
@@ -20,7 +27,7 @@ public class Main {
         userInterface.loadGeneralUserInterface();
     }
 
-    static User[] createUsers() {
+    public static User[] createUsers() {
         User[] users = new User[3];
         users[0] = new Admin("admin", "pwd1");
         users[1] = new Client("client1", "pwd2", "id123");

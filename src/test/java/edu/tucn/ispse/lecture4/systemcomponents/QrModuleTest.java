@@ -1,5 +1,6 @@
-package edu.tucn.ispse.lecture4;
+package edu.tucn.ispse.lecture4.systemcomponents;
 
+import edu.tucn.ispse.lecture4.systemcomponents.QrModule;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

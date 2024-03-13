@@ -1,4 +1,6 @@
-package edu.tucn.ispse.lecture4;
+package edu.tucn.ispse.lecture4.systemcomponents;
+
+import edu.tucn.ispse.lecture4.model.User;
 
 /**
  * @author Radu Miron

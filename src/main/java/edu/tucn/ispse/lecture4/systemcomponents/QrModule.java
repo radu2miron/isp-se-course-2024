@@ -1,4 +1,4 @@
-package edu.tucn.ispse.lecture4;
+package edu.tucn.ispse.lecture4.systemcomponents;
 
 import com.google.zxing.*;
 import com.google.zxing.client.j2se.BufferedImageLuminanceSource;

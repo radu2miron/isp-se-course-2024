@@ -5,7 +5,7 @@ package edu.tucn.ispse.lecture3.ex2polymorphism.wpoly;
  * @version 1
  */
 public class Dacia extends Car {
-    public Dacia(String name) {
-        super(name);
+    public Dacia() {
+        super(Dacia.class.getName());
     }
 }

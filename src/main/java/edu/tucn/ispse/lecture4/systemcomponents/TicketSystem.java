@@ -1,4 +1,8 @@
-package edu.tucn.ispse.lecture4;
+package edu.tucn.ispse.lecture4.systemcomponents;
+
+import edu.tucn.ispse.lecture4.model.Client;
+import edu.tucn.ispse.lecture4.model.Ticket;
+import edu.tucn.ispse.lecture4.model.User;
 
 import java.io.File;
 import java.util.UUID;

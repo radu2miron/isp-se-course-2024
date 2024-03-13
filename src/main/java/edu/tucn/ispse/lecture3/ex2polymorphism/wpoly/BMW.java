@@ -5,12 +5,12 @@ package edu.tucn.ispse.lecture3.ex2polymorphism.wpoly;
  * @version 1
  */
 public class BMW extends Car {
-    public BMW(String name) {
-        super(name);
+    public BMW() {
+        super(BMW.class.getName());
     }
 
     @Override
     public void go() {
-        System.out.println("BMW goes faster");
+        System.out.println(super.getDisplayName() + " goes faster");
     }
 }

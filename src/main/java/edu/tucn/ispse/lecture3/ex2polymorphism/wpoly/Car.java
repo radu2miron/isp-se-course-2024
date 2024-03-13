@@ -11,15 +11,19 @@ public class Car {
         this.displayName = displayName;
     }
 
-    public void start() {
+    void start() {
         System.out.printf("%s starts\n", displayName);
     }
 
-    public void go() {
+    void go() {
         System.out.printf("%s goes fast\n", displayName);
     }
 
-    public void stop() {
+    void stop() {
         System.out.printf("%s stops\n", displayName);
+    }
+
+    public String getDisplayName() {
+        return displayName;
     }
 }

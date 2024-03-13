@@ -1,5 +1,10 @@
-package edu.tucn.ispse.lecture4;
+package edu.tucn.ispse.lecture4.systemcomponents;
 
+import edu.tucn.ispse.lecture4.Main;
+import edu.tucn.ispse.lecture4.systemcomponents.AuthenticationModule;
+import edu.tucn.ispse.lecture4.systemcomponents.TicketSystem;
+import edu.tucn.ispse.lecture4.model.Ticket;
+import edu.tucn.ispse.lecture4.model.User;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
