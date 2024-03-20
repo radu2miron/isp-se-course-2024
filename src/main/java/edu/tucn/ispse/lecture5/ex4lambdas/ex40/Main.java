@@ -18,6 +18,9 @@ public class Main {
         // lambda expression for Performer implementation
         Performer implementation2 = param -> param.length();
         System.out.println(implementation2.performOperation("abdefg")); // 6
+
+        Performer implementation3 = s -> s.indexOf("!");
+        System.out.println(implementation3.performOperation("abc!efg!"));
     }
 }
 

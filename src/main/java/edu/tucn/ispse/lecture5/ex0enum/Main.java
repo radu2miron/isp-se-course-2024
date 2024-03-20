@@ -13,6 +13,7 @@ public class Main {
         // name (String) to PersonType
         PersonType personType1 = PersonType.valueOf("PROFESSOR");
         System.out.println(personType1);
+        System.out.println(PersonType.STUDENT.ordinal());
 
         // compare person types - the order (ordinal) in the enum is compared
         System.out.println("\nAUXILIARY_EMPLOYEE comparedTo PROFESSOR: " +
@@ -25,5 +26,12 @@ public class Main {
         for (PersonType type : PersonType.values()) {
             System.out.println(type);
         }
+
+        // USE PersonType in Person
+        Person person = new Person("John Doe", 25, PersonType.STUDENT);
+        System.out.println(person);
+
+        Person person1 = new Person("John Doe", 25, PersonType.valueOf("BAD")); // Expected IllegalArgumentException
+        System.out.println(person1);
     }
 }
