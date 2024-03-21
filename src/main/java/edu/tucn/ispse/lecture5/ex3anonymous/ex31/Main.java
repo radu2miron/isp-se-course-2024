@@ -1,4 +1,4 @@
-package edu.tucn.ispse.lecture5.ex3anonymous;
+package edu.tucn.ispse.lecture5.ex3anonymous.ex31;
 
 /**
  * @author Radu Miron
