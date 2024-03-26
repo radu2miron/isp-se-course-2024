@@ -13,7 +13,7 @@ import java.nio.file.Paths;
 
 public class Ex4OutOfMemError {
     public static void main(String[] args) {
-        Path path = Paths.get("/home/radu/backups/_to_save/books/Spring in Action, 5th Edition.pdf"); // file bigger than 5MB
+        Path path = Paths.get("/home/radu/backups/_to_save/books/hyperledger-fabric.pdf"); // file bigger than 5MB
 
         try {
             byte[] bytes = Files.readAllBytes(path);
