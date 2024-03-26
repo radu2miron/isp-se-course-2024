@@ -1,0 +1,77 @@
+package edu.tucn.ispse.lecture6.ex1collections.subex3map;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Scanner;
+
+import static java.lang.System.in;
+
+/**
+ * @author radumiron
+ * @since 09.04.2019
+ */
+public class Ex2DictionaryWithCustomClassAsKey {
+    public static void main(String[] args) {
+        Map<Word, String> dictionary = new HashMap<>();
+
+        int choice;
+        Scanner scanner = new Scanner(in);
+
+        do {
+            System.out.println("1. Add\n2. Find\n3. Exit");
+            choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1:
+                    System.out.println("word:");
+                    Word word = new Word(readLine());
+
+                    System.out.println("definition:");
+                    String definition = readLine();
+
+                    dictionary.put(word, definition);
+                    System.out.println(word + " has been added to the dictionary");
+
+                    break;
+                case 2:
+                    System.out.println("word:");
+                    word = new Word(readLine());
+                    System.out.println("definition:" + dictionary.get(word));
+
+                    break;
+            }
+        } while (choice != 3);
+    }
+
+    static class Word {
+        private String value;
+
+        public Word(String value) {
+            this.value = value;
+        }
+
+        @Override
+        public String toString() {
+            return value;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Word word = (Word) o;
+            return Objects.equals(value, word.value);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(value);
+        }
+    }
+
+    public static String readLine(){
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextLine();
+    }
+}
