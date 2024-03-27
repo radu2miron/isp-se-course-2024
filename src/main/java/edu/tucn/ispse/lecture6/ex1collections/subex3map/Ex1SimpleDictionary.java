@@ -8,7 +8,6 @@ import static java.lang.System.in;
 
 /**
  * @author radumiron
- * @version 1
  */
 public class Ex1SimpleDictionary {
     public static void main(String[] args) {

@@ -6,7 +6,6 @@ import java.util.TreeMap;
 
 /**
  * @author radumiron
- * @version 1
  */
 public class Ex3SortedMap {
     public static void main(String[] args) {

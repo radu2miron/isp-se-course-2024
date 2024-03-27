@@ -5,7 +5,6 @@ import java.util.Map;
 
 /**
  * @author Radu Miron
- * @version 1
  */
 public class SameHash {
     public static void main(String[] args) {

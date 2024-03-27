@@ -9,7 +9,6 @@ import static java.lang.System.in;
 
 /**
  * @author radumiron
- * @since 09.04.2019
  */
 public class Ex2DictionaryWithCustomClassAsKey {
     public static void main(String[] args) {
@@ -44,7 +43,9 @@ public class Ex2DictionaryWithCustomClassAsKey {
         } while (choice != 3);
     }
 
-    static class Word {
+    static class Word { // THIS CLASS IS USED AS A KEY IN A MAP;
+        // TODO: REMEMBER! It is very important to override equals() and hashCode().
+        // TODO: REMEMBER! Use the same attributes for generating equals() and hashCode()!
         private String value;
 
         public Word(String value) {

@@ -1,4 +1,4 @@
-package edu.tucn.ispse.lecture6.ex1collections.subex4queue;
+package edu.tucn.ispse.lecture6.ex1collections.subex5queue;
 
 import java.util.ArrayDeque;
 

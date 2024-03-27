@@ -14,5 +14,20 @@ public class ListRepo implements Repo {
         people.add(person);
     }
 
-    //todo: implement the rest of the CRUD operations
+    @Override
+    public Person read(String idNumber) {
+        //todo: implement
+        return null;
+    }
+
+    @Override
+    public void update(Person p) {
+        //todo: implement
+    }
+
+    @Override
+    public Person delete(String idNumber) {
+        //todo: implement
+        return null;
+    }
 }
