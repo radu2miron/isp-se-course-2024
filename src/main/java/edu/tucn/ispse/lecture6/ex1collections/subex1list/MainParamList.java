@@ -58,10 +58,13 @@ public class MainParamList {
 
         //list of custom class
         List<Person> persons = new ArrayList<>();
-        persons.add(new Person("123", "John", "Doe", "12 Abc St, DC"));
+        persons.add(new Person("000", "John", "Doe", "12 Abc St, DC"));
         persons.add(new Person("000", "Jane", "Doe", "12 Abc St, DC"));
         persons.add(new Person("456", "Jane", "Doe", "12 Abc St, DC"));
-        persons.add(new Person("999", "Abigail", "Doe", "12 Abc St, DC"));
+        persons.add(new Person("001", "Abigail", "Doe", "12 Abc St, DC"));
+        persons.add(new Person("003", "Abigail", "Doe", "12 Abc St, DC"));
+        persons.add(new Person("002", "Abigail", "Doe", "12 Abc St, DC"));
+        persons.add(new Person("004", "Abigail", "Doe", "12 Abc St, DC"));
         Person person1 = persons.get(0); // no type cast needed
         System.out.println(person1);
 
@@ -70,7 +73,13 @@ public class MainParamList {
         System.out.println("sorted persons list by id number:");
         persons.forEach(p -> System.out.println(p.toString()));
 
-        Collections.sort(persons, (o1, o2) -> o1.getFirstName().compareTo(o2.getFirstName()));
+        Collections.sort(persons, (o1, o2) -> {
+            int r = o1.getFirstName().compareTo(o2.getFirstName());
+            if (r == 0) {
+                r = o1.getIdNumber().compareTo(o2.getIdNumber());
+            }
+            return r;
+        });
         System.out.println("sorted persons list by first name:");
         persons.forEach(p -> System.out.println(p.toString()));
     }

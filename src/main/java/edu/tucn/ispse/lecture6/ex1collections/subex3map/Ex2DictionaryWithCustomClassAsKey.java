@@ -18,7 +18,7 @@ public class Ex2DictionaryWithCustomClassAsKey {
         Scanner scanner = new Scanner(in);
 
         do {
-            System.out.println("1. Add\n2. Find\n3. Exit");
+            System.out.println("1. Add\n2. Find\n3. Remove\n4. Exit");
             choice = scanner.nextInt();
 
             switch (choice) {
@@ -39,8 +39,12 @@ public class Ex2DictionaryWithCustomClassAsKey {
                     System.out.println("definition:" + dictionary.get(word));
 
                     break;
+                case 3:
+                    System.out.println("word:");
+                    word = new Word(readLine());
+                    System.out.println("removed -> " + word + ": "+ dictionary.get(word));
             }
-        } while (choice != 3);
+        } while (choice != 4);
     }
 
     static class Word { // THIS CLASS IS USED AS A KEY IN A MAP;

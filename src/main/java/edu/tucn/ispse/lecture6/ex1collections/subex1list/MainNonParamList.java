@@ -29,6 +29,8 @@ public class MainNonParamList {
         Person p = (Person) list.get(1); // type cast needed
         // etc.
 
+//        list.get(5);
+
         // sum the integers in the list
         int sum = 0;
 

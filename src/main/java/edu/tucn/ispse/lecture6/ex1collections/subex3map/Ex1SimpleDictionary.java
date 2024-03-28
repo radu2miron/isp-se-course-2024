@@ -17,7 +17,7 @@ public class Ex1SimpleDictionary {
         Scanner scanner = new Scanner(in);
 
         do {
-            System.out.println("1. Add\n2. Find\n3. Exit");
+            System.out.println("1. Add\n2. Find\n3. Remove\n4. Exit");
             choice = scanner.nextInt();
 
             switch (choice) {
@@ -38,8 +38,12 @@ public class Ex1SimpleDictionary {
                     System.out.println("definition:" + dictionary.get(word));
 
                     break;
+                case 3:
+                    System.out.println("remove word:");
+                    word = readLine();
+                    System.out.println(word + ": " + dictionary.remove(word) +" -> removed");
             }
-        } while (choice != 3);
+        } while (choice != 4);
     }
 
     public static String readLine(){

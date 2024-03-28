@@ -29,5 +29,14 @@ public class Ex3SortedMap {
         for (Map.Entry<String, String> kv : sortedDictionary.entrySet()) {
             System.out.println(kv.getKey() + ": " + kv.getValue());
         }
+
+        System.out.println();
+
+        // get one value
+        System.out.println("got T -> " + sortedDictionary.get("T"));
+
+        // remove one pair
+        System.out.println("removed T -> " + sortedDictionary.remove("T"));
+        System.out.println("search T -> " + sortedDictionary.get("T"));
     }
 }

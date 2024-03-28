@@ -8,15 +8,16 @@ import java.util.Map;
  */
 public class SameHash {
     public static void main(String[] args) {
-        System.out.println("Aa".hashCode());
-        System.out.println("BB".hashCode());
+        System.out.println("Aa hashCode = " + "Aa".hashCode());
+        System.out.println("BB hashCode = " + "BB".hashCode());
 
         Map<String, String> testSameHash = new HashMap<>();
         testSameHash.put("Aa", "val1");
         testSameHash.put("BB", "val2");
         testSameHash.put("BB", "val3");
 
-        System.out.println(testSameHash.get("Aa"));
-        System.out.println(testSameHash.get("BB"));
+        System.out.println("Get values: ");
+        System.out.println("Aa -> " + testSameHash.get("Aa"));
+        System.out.println("BB -> " + testSameHash.get("BB"));
     }
 }

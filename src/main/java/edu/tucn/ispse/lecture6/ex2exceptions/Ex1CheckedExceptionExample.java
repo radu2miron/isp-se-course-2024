@@ -14,7 +14,6 @@ import java.util.UUID;
 public class Ex1CheckedExceptionExample {
     public static void main(String[] args) {
         String fileName = UUID.randomUUID().toString(); // obviously, this file doesn't exist
-
         try {
             Files.lines(Paths.get(fileName)) // <=> Files.readAllLines(Paths.get(fileName)).stream()
                     .forEach(l -> System.out.println(l));

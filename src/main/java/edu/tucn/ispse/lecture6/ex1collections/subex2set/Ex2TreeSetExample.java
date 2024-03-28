@@ -19,7 +19,7 @@ public class Ex2TreeSetExample {
         print("HashSet", humans);
 
         // sort by first name - Human is comparable by first name
-        TreeSet<Human> humansSortedFistName = new TreeSet<>();
+        Set<Human> humansSortedFistName = new TreeSet<>();
         humansSortedFistName.addAll(humans);
         print("TreeSet - sorted by first name", humansSortedFistName);
 
@@ -29,7 +29,7 @@ public class Ex2TreeSetExample {
         print("TreeSet - sorted by last name", humansSortedLastName);
     }
 
-    private static void print(String what, Set<Human> humans) {
+    static void print(String what, Set<Human> humans) {
         System.out.println(what);
 
         for (Human human : humans) {
