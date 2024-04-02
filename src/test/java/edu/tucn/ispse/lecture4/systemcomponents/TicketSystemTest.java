@@ -5,20 +5,16 @@ import edu.tucn.ispse.lecture4.systemcomponents.AuthenticationModule;
 import edu.tucn.ispse.lecture4.systemcomponents.TicketSystem;
 import edu.tucn.ispse.lecture4.model.Ticket;
 import edu.tucn.ispse.lecture4.model.User;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.*;
 
 /**
  * @author Radu Miron
  * @version 1
  */
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class TicketSystemTest {
     private TicketSystem ticketSystem;
 
-    @BeforeAll
+    @BeforeEach
     public void init() {
         User[] users = Main.createUsers();
         AuthenticationModule authenticationModule = new AuthenticationModule(users);

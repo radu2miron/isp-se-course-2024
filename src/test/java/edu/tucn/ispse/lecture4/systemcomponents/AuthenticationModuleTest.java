@@ -3,20 +3,16 @@ package edu.tucn.ispse.lecture4.systemcomponents;
 import edu.tucn.ispse.lecture4.Main;
 import edu.tucn.ispse.lecture4.systemcomponents.AuthenticationModule;
 import edu.tucn.ispse.lecture4.model.User;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.*;
 
 /**
  * @author Radu Miron
  * @version 1
  */
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class AuthenticationModuleTest {
     private AuthenticationModule authenticationModule;
 
-    @BeforeAll
+    @BeforeEach
     public void init() {
         User[] users = Main.createUsers();
         authenticationModule = new AuthenticationModule(users);

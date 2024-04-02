@@ -9,9 +9,36 @@ public class Person {
     private int age;
     private PersonType type;
 
+    public Person() {
+    }
+
     public Person(String name, int age, PersonType type) {
         this.name = name;
         this.age = age;
+        this.type = type;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public PersonType getType() {
+        return type;
+    }
+
+    public void setType(PersonType type) {
         this.type = type;
     }
 
