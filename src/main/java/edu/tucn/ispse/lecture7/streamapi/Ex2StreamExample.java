@@ -31,7 +31,7 @@ public class Ex2StreamExample {
         List<String> carBrands = Arrays.asList("Dacia", "ARO", "BMW", "Renault", "Alfa Romeo", "Bugatti");
         String cbJoined = carBrands.stream()
                 .filter(cb -> cb.length() <= 7) // keep only the brands with a length < 7 chars
-                .map(cb -> "[" + cb + "]") // add prefix '[' and suffix '[' to brands
+                .map(cb -> "[" + cb + "]") // add prefix '[' and suffix ']' to brands
                 .collect(Collectors.joining("_")); // join the results into a String by using '_' as separator
         System.out.println(cbJoined);
 

@@ -16,6 +16,9 @@ public class MainParamList {
         strings.add("ccc");
         strings.add("aaa");
         strings.add("bbb");
+        strings.add("bbb");
+        strings.add("bbb");
+        strings.add("bbb");
         String string1 = strings.get(1); // no type cast needed
         System.out.println("The first string in list: " + string1);
 
@@ -39,6 +42,7 @@ public class MainParamList {
         integers.add(1);
         integers.add(2);
         integers.add(3);
+        integers.remove(2);
 
         int sum = 0;
         for (Integer i : integers) {
