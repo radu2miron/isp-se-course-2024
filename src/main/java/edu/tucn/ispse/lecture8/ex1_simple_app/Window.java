@@ -16,7 +16,7 @@ public class Window {
         JLabel label = new JLabel("This is a label");
         JButton button = new JButton("Button");
 
-        //TODO: Add event handler to the button
+        button.addActionListener(e-> System.out.println("click"));
 
         // add components to the panel
         panel.add(label); panel.add(button);

@@ -37,7 +37,7 @@ public class Ex2StreamExample {
 
         // read each line in file -> convert it to char array -> flat map -> collect to a char frequency map
         Map<Character, Long> characterFrequency =
-                Files.lines(Path.of("testfiles/lore_ipsum.txt")) // it returns a stream of String
+                Files.lines(Path.of("testfiles/lorem_ipsum.txt")) // it returns a stream of String
                         .map(line -> line.chars()) // it returns a stream of IntStreams
                         .flatMap(intStream -> intStream.mapToObj(i -> (char) i)) // creates a single stream of Character (flat the streams)
                         .collect(Collectors.groupingBy(Function.identity(), Collectors.counting())); // collect to a character frequency map

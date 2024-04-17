@@ -1,4 +1,4 @@
-package edu.tucn.ispse.lecture9.ex5decoupling;
+package edu.tucn.ispse.lecture9.ex6decoupling;
 
 import java.io.FileWriter;
 import java.io.IOException;

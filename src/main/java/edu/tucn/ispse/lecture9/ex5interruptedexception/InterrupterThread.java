@@ -1,4 +1,4 @@
-package edu.tucn.ispse.lecture9.ex6interruptedexception;
+package edu.tucn.ispse.lecture9.ex5interruptedexception;
 
 /**
  * @author Radu Miron

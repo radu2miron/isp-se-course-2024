@@ -19,7 +19,7 @@ public class PersonController implements ActionListener {
     public PersonController(PersonModel model, PersonView view) {
         this.model = model;
         this.view = view;
-        view.addSubmitListener(this);
+        this.view.addSubmitListener(this);
     }
 
     public void actionPerformed(ActionEvent e) {
