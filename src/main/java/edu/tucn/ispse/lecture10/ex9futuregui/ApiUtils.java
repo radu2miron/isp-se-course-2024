@@ -20,9 +20,9 @@ import java.util.concurrent.Future;
 public class ApiUtils {
     private static final ExecutorService EXECUTOR_SERVICE = Executors.newFixedThreadPool(3);
     private static final String BASE_URL = "https://api.coincap.io/v2/assets/";
-    private static final List<String> COINS = List.of("bitcoin", "ethereum", "tether");
+    private static final List<String> COINS = List.of("bitcoin", "ethereum", "tether", "solana", "binance-coin");
 
-    private static Coin getCoin(String coinName) throws Exception {
+    private static CoinModel getCoin(String coinName) throws Exception {
         URI target = new URI(BASE_URL + coinName);
         HttpRequest request = HttpRequest.newBuilder(target).GET().build();
         HttpResponse<String> response = HttpClient.newBuilder()
@@ -31,16 +31,16 @@ public class ApiUtils {
         if (response.statusCode() == 200) {
             Gson gson = new Gson();
             String coinDataJson = response.body();
-            return gson.fromJson(coinDataJson, Coin.class);
+            return gson.fromJson(coinDataJson, CoinModel.class);
         } else {
             throw new RuntimeException("Getting coin " + coinName + "; " +
                     "Invalid response code: " + response.statusCode());
         }
     }
 
-    public static List<Coin> getCoins() {
-        List<Coin> coins = new ArrayList<>();
-        List<Future<Coin>> futureCoins = new ArrayList<>();
+    public static List<CoinModel> getCoins() {
+        List<CoinModel> coins = new ArrayList<>();
+        List<Future<CoinModel>> futureCoins = new ArrayList<>();
 
         COINS.forEach(coin ->
                 // DO ASYNCHRONOUS CALLS!

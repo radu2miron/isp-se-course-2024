@@ -2,6 +2,7 @@ package edu.tucn.ispse.lecture10.ex9futuregui;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.awt.*;
 import java.util.List;
 
 /**
@@ -10,17 +11,15 @@ import java.util.List;
  */
 public class Win extends JFrame {
     public Win() {
-        super("Crypto Market");
-        this.setSize(700, 200);
+        super("Crypto Market Prices");
+        this.setSize(700, 400);
         this.setLayout(null);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         // columns and data
         String[] columns = {"Rank", "Name", "Price (USD)", "MarketCap (USD)"};
         Object[][] data = {
-                {"1", "Bitcoin", 0.00, 0.00},
-                {"2", "Ethereum", 0.00, 0.00},
-                {"3", "Tether", 0.00, 0.00}
+                {"1", "Bitcoin", 0.00, 0.00}
         };
 
         // create a table model
@@ -31,15 +30,26 @@ public class Win extends JFrame {
 
         // create a JScrollPane to hold the table
         JScrollPane scrollPane = new JScrollPane(table);
-        scrollPane.setBounds(10, 10, 680, 100);
+        scrollPane.setBounds(10, 10, 680, 200);
 
         // create JButton to refresh data
         JButton refreshButton = new JButton("Refresh data");
-        refreshButton.setBounds(10, 130, 680, 20);
+        refreshButton.setBounds(10, 230, 680, 20);
         refreshButton.addActionListener(e -> refreshData(model));
+
+        // create disclaimer label
+        JLabel disclaimerLabel = new JLabel("<html>" +
+                "You should be prepared to lose all the money you invest in cryptoassets.<BR>" +
+                "The cryptoasset market is largely unregulated.<BR>" +
+                "There is a risk of losing money or any cryptoassets you purchase due to risks such as:<BR>" +
+                "cyber-attacks, financial crime and firm failure.</html>"
+        );
+        disclaimerLabel.setBounds(10, 270, 680, 100);
+        disclaimerLabel.setForeground(Color.RED);
 
         this.add(scrollPane);
         this.add(refreshButton);
+        this.add(disclaimerLabel);
         this.setVisible(true);
     }
 
@@ -48,12 +58,17 @@ public class Win extends JFrame {
         model.setRowCount(0);
 
         // get coins' data
-        List<Coin> coins = ApiUtils.getCoins();
+        List<CoinModel> coins = ApiUtils.getCoins();
         coins.forEach(c -> model.addRow(new Object[]{
                 c.data().rank(),
                 c.data().name(),
-                c.data().priceUsd(),
-                c.data().marketCapUsd()}));
+                trim(c.data().priceUsd()),
+                trim(c.data().marketCapUsd())}));
         model.fireTableDataChanged();
+    }
+
+    private String trim(String val) {
+        int pIndex = val.indexOf(".");
+        return val.substring(0, pIndex + 5);
     }
 }
