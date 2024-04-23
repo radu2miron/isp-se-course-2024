@@ -58,7 +58,7 @@ public class Win extends JFrame {
         model.setRowCount(0);
 
         // get coins' data
-        List<CoinModel> coins = ApiUtils.getCoins();
+        List<CoinModel> coins = CoinsApiUtils.getCoins();
         coins.forEach(c -> model.addRow(new Object[]{
                 c.data().rank(),
                 c.data().name(),
