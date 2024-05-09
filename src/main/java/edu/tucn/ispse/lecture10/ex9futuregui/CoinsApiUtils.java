@@ -18,7 +18,7 @@ import java.util.concurrent.Future;
  * @version 1
  */
 public class CoinsApiUtils {
-    private static final ExecutorService EXECUTOR_SERVICE = Executors.newFixedThreadPool(3);
+    private static final ExecutorService EXECUTOR_SERVICE = Executors.newFixedThreadPool(5);
     private static final String BASE_URL = "https://api.coincap.io/v2/assets/";
     private static final List<String> COINS = List.of("bitcoin", "ethereum", "tether", "solana", "binance-coin");
 

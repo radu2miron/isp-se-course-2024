@@ -47,7 +47,7 @@ class MyCallableTask implements Callable<String> {
         // Simulate some time-consuming task
         Thread.sleep(2000);
 
-        return "Task completed";
+        return "Task completed by " + Thread.currentThread().getName();
     }
 }
 
