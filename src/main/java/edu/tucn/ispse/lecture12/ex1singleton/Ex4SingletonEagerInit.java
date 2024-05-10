@@ -9,13 +9,13 @@ import java.util.List;
  */
 public class Ex4SingletonEagerInit {
     public static void main(String[] args) {
-        FileWriter fileWriter1 = FileWriter.getInstance();
+        FileWriterEagerInit fileWriter1 = FileWriterEagerInit.getInstance();
         fileWriter1.setFileName("test1");
 
         System.out.println("After the first call of getInstance()");
         System.out.println(fileWriter1.getFileName());
 
-        FileWriter fileWriter2 = FileWriter.getInstance();
+        FileWriterEagerInit fileWriter2 = FileWriterEagerInit.getInstance();
         fileWriter2.setFileName("test2");
 
         System.out.println("After the second call of getInstance()");

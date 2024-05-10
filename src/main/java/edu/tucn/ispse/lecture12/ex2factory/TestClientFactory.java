@@ -64,7 +64,7 @@ class ClientB extends Client {
 public class TestClientFactory {
     public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
         // use REFLEXION to instantiate a specific type of client
-        String className = "edu.tucn.se.lecture11.ex2factory.Client" + args[0].toUpperCase();
+        String className = "edu.tucn.ispse.lecture12.ex2factory.Client" + args[0].toUpperCase();
         Client c = (Client) Class.forName(className).getDeclaredConstructor().newInstance();
 
         c.printProductDescr("Product Name");
