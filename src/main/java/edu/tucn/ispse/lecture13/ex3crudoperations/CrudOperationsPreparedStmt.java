@@ -28,7 +28,7 @@ public class CrudOperationsPreparedStmt {
                     stmt.setString(1, student.firstName());
                     stmt.setString(2, student.lastName());
                     stmt.setDate(3, new Date(student.dateOfBirth().getTime()));
-                    stmt.executeUpdate(sql);
+                    stmt.executeUpdate();
                 }
                 System.out.println("Inserted 4 records into 'students'");
             }
@@ -38,7 +38,7 @@ public class CrudOperationsPreparedStmt {
             try (PreparedStatement stmt = conn.prepareStatement(sql)) {
                 stmt.setDate(1, Date.valueOf("2006-12-31"));
 
-                try (ResultSet rs = stmt.executeQuery(sql)) {
+                try (ResultSet rs = stmt.executeQuery()) {
                     while (rs.next()) {
                         Student student = new Student(
                                 rs.getInt("id"),
@@ -55,7 +55,7 @@ public class CrudOperationsPreparedStmt {
             try (PreparedStatement stmt = conn.prepareStatement(sql)) {
                 stmt.setString(1, "Michael");
                 stmt.setString(2, "John");
-                stmt.executeUpdate(sql);
+                stmt.executeUpdate();
                 System.out.println("Updated record with first name 'John'");
             }
 
@@ -63,7 +63,7 @@ public class CrudOperationsPreparedStmt {
             sql = "DELETE FROM students WHERE last_name = ?;";
             try (PreparedStatement stmt = conn.prepareStatement(sql)) {
                 stmt.setString(1, "Davis");
-                stmt.executeUpdate(sql);
+                stmt.executeUpdate();
                 System.out.println("Deleted record with last name 'Davis'");
             }
         } catch (SQLException e) {

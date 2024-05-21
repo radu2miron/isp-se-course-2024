@@ -1,5 +1,7 @@
 package edu.tucn.ispse.lecture13.utils.model;
 
+import java.util.Date;
+
 /**
  * RECORDS ARE IMMUTABLE!
  * Records provide: all args constructor, getters, hashCode(), equals() and toString()
@@ -7,5 +9,5 @@ package edu.tucn.ispse.lecture13.utils.model;
  * @author Radu Miron
  * @version 1
  */
-public record Address(Integer id, String street, String city, String country) {
+public record StudentAddr(Integer id, String firstName, String lastName, Date dateOfBirth, Integer addressId) {
 }
