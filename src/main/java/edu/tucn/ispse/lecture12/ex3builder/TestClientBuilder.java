@@ -16,12 +16,12 @@ class User {
         this.age = builder.age;
     }
 
-    public User(String email, String firstName, String lastName, int age) {
-        this.email = email;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
-    }
+//    public User(String email, String firstName, String lastName, int age) {
+//        this.email = email;
+//        this.firstName = firstName;
+//        this.lastName = lastName;
+//        this.age = age;
+//    }
 
     @Override
     public String toString() {

@@ -11,7 +11,7 @@ interface Iterator {
 }
 
 interface Container {
-    Iterator getIterator();
+    Iterator iterator();
 }
 
 class NameRepository implements Container {
@@ -19,7 +19,7 @@ class NameRepository implements Container {
     private NameIterator nameIterator;
 
     @Override
-    public Iterator getIterator() {
+    public Iterator iterator() {
         nameIterator = new NameIterator();
         return nameIterator;
     }
@@ -47,7 +47,7 @@ public class IteratorPatternDemo {
     public static void main(String[] args) {
         NameRepository namesRepository = new NameRepository();
 
-        for (Iterator iter = namesRepository.getIterator(); iter.hasNext();) {
+        for (Iterator iter = namesRepository.iterator(); iter.hasNext();) {
             String name = (String) iter.next();
             System.out.println("Name : " + name);
         }
@@ -56,7 +56,7 @@ public class IteratorPatternDemo {
 
         //OR
 
-        Iterator it = namesRepository.getIterator();
+        Iterator it = namesRepository.iterator();
 
         while (it.hasNext()) {
             System.out.println(it.next());

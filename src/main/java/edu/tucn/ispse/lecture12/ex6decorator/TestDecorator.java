@@ -5,16 +5,16 @@ package edu.tucn.ispse.lecture12.ex6decorator;
  */
 public class TestDecorator {
     public static void main(String[] args) {
-        Circle circle = new Circle();
+        Shape circle = new Circle();
         circle.draw();
 
-        Square square = new Square();
+        Shape square = new Square();
         square.draw();
 
-        RedBorderShapeDecorator redBorderShapeDecorator = new RedBorderShapeDecorator(circle);
+        Shape redBorderShapeDecorator = new RedBorderShapeDecorator(circle);
         redBorderShapeDecorator.draw();
 
-        BlueBorderShapeDecorator blueBorderShapeDecorator = new BlueBorderShapeDecorator(square);
+        Shape blueBorderShapeDecorator = new BlueBorderShapeDecorator(square);
         blueBorderShapeDecorator.draw();
     }
 }
